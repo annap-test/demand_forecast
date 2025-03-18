@@ -1,12 +1,12 @@
 # app/config.py
 
 DATA_PATH = "data/"
-your_file_id_for_stores_csv = '1YgE0K5mrlsHg8QmWnozuAsX9YPk4EYgf'
-your_file_id_for_items_csv = '1gsts50e_UfBPonkAg67VtLE44zG85It4'
-your_file_id_for_transactions_csv = '1-4RSVKRYYlnIY4Cd-G_ZYbkJqt-rPXVx'
-your_file_id_for_oil_csv = '1QDzb7nsVN_1qISS6iTBel4gwlYNtrMjU'
-your_file_id_for_holidays_csv = '1asSLMupocsH8CEoykirb74BwppGNNQLG'
-your_file_id_for_train_csv = '1-2t5PWG6ngtqNMCwi6Nyd3IAGl_1__eA'
+your_file_id_for_stores_csv = '15Gvqx2-zn9XWaaaNKD8Tg1fGNh5axbHM'
+your_file_id_for_items_csv = '1nclME03wt2SVt-CqXd7V42RzW1W8S2GM'
+your_file_id_for_transactions_csv = '1-3Ga1UR_hQJ-PB7HPGd7Jcc7CxLYGoW0'
+your_file_id_for_oil_csv = '1fFrX3rQW9XkGQn9RuZCYxNsK6GNlssOD'
+your_file_id_for_holidays_csv = '1vifHhm2qzcPV3G0UpDFYYjrvKq41JOxM'
+your_file_id_for_train_csv = '1-1uMbq0JlRO8ERO6jZHX2376UcHVqWOE'
 
 # Google Drive links for each file (replace with actual file IDs)
 GOOGLE_DRIVE_LINKS = {
@@ -19,7 +19,7 @@ GOOGLE_DRIVE_LINKS = {
 }
 
 MODEL_PATH = 'model/'
-your_file_id_for_xgboost_model_xgb = "10s41mHM-6CopwrAAGYRWSuXinjz0FE4-"  # Replace with the actual file ID for model.xgb from MLFlow aritifacts
+your_file_id_for_xgboost_model_xgb = "1hd-TQvzEOnh-WZvLsaxsnCguhku4spxq"  # Replace with the actual file ID for model.xgb from MLFlow aritifacts
 GOOGLE_DRIVE_LINKS_MODELS = {
     "xgboost_model": f"https://drive.google.com/uc?id={your_file_id_for_xgboost_model_xgb}"
 }

@@ -38,11 +38,16 @@ def load_data(data_path=DATA_PATH):
     
     # Load data only for stores in 'Pichincha' region
     # Get the list of store IDs for the state 'Pichincha'
-    store_ids = df_stores[df_stores['state'] == 'Pichincha']['store_nbr'].unique()
+    store_ids = df_stores[df_stores['state'] == 'Guayas']['store_nbr'].unique()
+    item_families = ['GROCERY I', 'BEVERAGES', 'CLEANING']
+
+    # now, we can get ids for the items that are in these familieis
+    item_ids = df_items[df_items['family'].isin(item_families)]['item_nbr'].unique()
     # Select the same items as for "Classical methods":
-    item_ids = [564533, 838216, 582865, 364606]  # ToDo: add more items (e.g., all items from a family)
+    #item_ids = [564533, 838216, 582865, 364606]  # ToDo: add more items (e.g., all items from a family)
     # Select data before April 2014
     max_date = '2014-04-01'
+    min_date = '2014-01-01'
 
     # Initialize an empty list to hold filtered chunks
     filtered_chunks = []
@@ -56,7 +61,7 @@ def load_data(data_path=DATA_PATH):
         chunk_filtered = chunk[
             (chunk['store_nbr'].isin(store_ids)) & 
             (chunk['item_nbr'].isin(item_ids)) & 
-            (chunk['date'] < max_date)
+            ((chunk['date'] < max_date)& (chunk['date'] >= min_date))
         ]
         # Append the filtered chunk to the list
         filtered_chunks.append(chunk_filtered)
